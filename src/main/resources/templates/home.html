@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h2>Home</h2>
+    <button type="button"><a href="/phonebook/add">Add</a> </button>
+    <table>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Tel</th>
+        {{#personsAndPhoneLists}}
+
+            <tr>
+                <td><a href="/phonebook/details/{{person.id}}">{{person.name}}</a></td>
+                <td>{{person.email}}</td>
+                <td>{{#phone}}{{number}} {{/phone}}</td>
+            </tr>
+
+
+        {{/personsAndPhoneLists}}
+    </table>
+</body>
+</html>

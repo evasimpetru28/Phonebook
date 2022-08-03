@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Person details</title>
+</head>
+<body>
+  <div>
+      <h3>Details</h3>
+      <div>
+          <button type="button"><a href="/phonebook/edit">Edit</a></button>
+          <button formaction="" type="button"><a href="/phonebook/deleteperson/{{id}}">Delete</a></button>
+      </div>
+      <p>Name: {{name}}</p>
+      <p>Email: {{email}}</p>
+      <p>Phone list:</p>
+      <ul>
+          {{#personPhoneList}}
+          <li>{{number}}</li>
+          {{/personPhoneList}}
+      </ul>
+  </div>
+</body>
+</html>
